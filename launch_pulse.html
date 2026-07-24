@@ -79,7 +79,9 @@
     max-width:1120px; margin:0 auto; position:relative; z-index:1;
     flex-wrap:wrap;
   }
-  .live{ display:flex; align-items:center; gap:8px; color:var(--paper); }
+  .live{ display:flex; align-items:center; gap:8px; color:var(--paper); text-decoration:none; transition:color .15s; }
+  a.live:hover{ color:var(--signal); }
+  a.live:focus-visible{ outline:2px solid var(--signal); outline-offset:3px; border-radius:4px; }
   .live .dot{
     width:8px; height:8px; border-radius:50%; background:var(--signal);
     box-shadow:0 0 0 0 var(--signal-glow);
@@ -302,8 +304,6 @@
   }
   .closing p{ max-width:52ch; color:var(--mist); font-size:.95rem; }
   .closing .meta{ font-family:var(--mono); font-size:.72rem; color:var(--mist-dim); text-align:right; }
-  .closing .meta a{ color:var(--signal); text-decoration:none; }
-  .closing .meta a:hover{ text-decoration:underline; }
 
   ::-webkit-scrollbar{ width:10px; }
   ::-webkit-scrollbar-thumb{ background:var(--panel-2); border-radius:6px; }
@@ -312,7 +312,7 @@
 <div class="ambient"></div>
 
 <div class="topbar">
-  <div class="live"><span class="dot"></span> platform-study-analitycs-asossiate.vercel.app</div>
+  <a class="live" href="https://platform-study-analitycs-asossiate.vercel.app/" target="_blank" rel="noopener"><span class="dot"></span> platform-study-analitycs-asossiate.vercel.app</a>
   <div class="topbar-right">
     <span>19&ndash;24 JUL 2026 &middot; <span data-i18n="env">PRODUÇÃO</span></span>
     <div class="langs" role="group" aria-label="Idioma / Language / Idioma">
@@ -420,8 +420,7 @@
       <p data-i18n="footer_p">Seis dias depois de publicá-lo, o projeto já tem tração real na comunidade &mdash; e quase tudo veio de uma única publicação no LinkedIn. Um bom sinal para continuar compartilhando.</p>
       <div class="meta">
         <span data-i18n="meta_source">Fonte: Vercel Web Analytics</span><br>
-        <span data-i18n="meta_window">Período: 19&ndash;24 jul 2026</span><br>
-        <a href="https://platform-study-analitycs-asossiate.vercel.app" target="_blank" rel="noopener">platform-study-analitycs-asossiate.vercel.app ↗</a>
+        <span data-i18n="meta_window">Período: 19&ndash;24 jul 2026</span>
       </div>
     </div>
   </footer>
